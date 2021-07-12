@@ -1,0 +1,39 @@
+﻿@model Proyecto3_Medico.Models.MedicoModel
+<p>hola desde iniciar sesion</p>
+<div id="logIn" class="container  ">
+
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <form asp-action="logIn">
+                        <h7>Entrada al sistema</h7>
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                        <div class="form-group">
+                            <label asp-for="dr_id" class="control-label">C&eacute;dula</label>
+                            <input asp-for="dr_id" class="form-control" type ="text"/>
+                            <span asp-validation-for="dr_id" class="text-danger"></span>
+
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="dr_code" class="control-label">C&oacute;digo</label>
+                            <input asp-for="dr_code" class="form-control" />
+                            <span asp-validation-for="dr_code" class="text-danger" type ="text"></span>
+
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="dr_password" class="control-label">Contrase&ntilde;a</label>
+                            <input asp-for="dr_password" type="password" class="form-control" />
+                            <span asp-validation-for="dr_password" class="text-danger"></span>
+
+                        </div>
+                        <div>
+                            <input type="submit" value="INGRESAR" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

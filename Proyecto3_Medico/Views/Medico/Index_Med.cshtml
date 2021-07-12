@@ -1,0 +1,92 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<p>pagina inicio medico</p>
+<div id="recordContainer" class="container  ">
+
+    <div id="row" class="row">
+        <div class="col-sm-9 col-md-8 col-lg-4" style="display:block;">
+
+            <div style="display: inline-block;" class="card" style="width: 18rem;">
+                <img style="object-fit: contain;" src="~/img/vaccine.jpg" width="90em" height="150em" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text">
+                        Ingresar Vacuna de Paciente
+                    </p>
+                    <button type="button" id="irVacunas" class="btn badge-light" onclick="@("window.location.href='" + @Url.Action("vaccine", "Medico") + "'");">IR</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-9 col-md-8 col-lg-4" style="display:block;">
+
+            <div style="display: inline-block;" class="card" style="width: 18rem;">
+                <img style="object-fit: contain;" src="~/img/appointment.jpg" width="90em" height="150em" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text">
+                        Agendar Cita de Pacientes
+                    </p>
+                    <button type="button" id="irVacunas" class="btn badge-light" onclick="@("window.location.href='" + @Url.Action("app", "Medico") + "'");">IR</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-9 col-md-8 col-lg-4" style="display:block;">
+
+            <div style="display: inline-block;" class="card" style="width: 18rem;">
+                <img style="object-fit: contain;" src="~/img/allergy.jpg" width="90em" height="150em" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text">
+                        Ingresar Alergia de Paciente
+                    </p>
+                    <button type="button" id="irVacunas" class="btn badge-light" onclick="@("window.location.href='" + @Url.Action("allergy", "Medico") + "'");">IR</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-9 col-md-8 col-lg-4" style="display:block;">
+
+            <div style="display: inline-block;" class="card" style="width: 18rem;">
+                <img style="object-fit: contain;" src="~/img/vaccine.jpg" width="90em" height="150em" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text">
+                        Gestionar Vacunas de Pacientes
+                    </p>
+                    <button type="button" id="irVacunas" class="btn badge-light" onclick="@("window.location.href='" + @Url.Action("Index_Vaccine", "Vaccine") + "'");">IR</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-9 col-md-8 col-lg-4" style="display:block;">
+
+            <div style="display: inline-block;" class="card" style="width: 18rem;">
+                <img style="object-fit: contain;" src="~/img/appointment.jpg" width="90em" height="150em" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text">
+                        Gestionar Citas de Pacientes
+                    </p>
+                    <button type="button" id="irVacunas" class="btn badge-light" onclick="@("window.location.href='" + @Url.Action("INdex_Appointment", "Appointment") + "'");">IR</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-sm-9 col-md-8 col-lg-4" style="display:block;">
+
+            <div style="display: inline-block;" class="card" style="width: 18rem;">
+                <img style="object-fit: contain;" src="~/img/allergy.jpg" width="90em" height="150em" class="card-img-top">
+                <div class="card-body">
+                    <p class="card-text">
+                        Gestionar Alergias de Pacientes
+                    </p>
+                    <button type="button" id="irVacunas" class="btn badge-light" onclick="@("window.location.href='" + @Url.Action("Index_Allergy", "Allergy") + "'");">IR</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

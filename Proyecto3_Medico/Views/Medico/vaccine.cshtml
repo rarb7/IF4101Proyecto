@@ -1,0 +1,69 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{}
+@using Proyecto3_Medico.Models;
+@model patientVaccineModel
+
+<p>hola desde vacuna</p>
+<div id="vacunacontainer" class="container  ">
+    @*<input disabled="true" id="resultado" />*@
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <form >
+                        <h7>Ingresar/Agendar una vacuna m&eacute;dica</h7>
+                        <div>
+                            <h7>Paciente: </h7>
+                            <select name="patientcb1" id="patientcb1" class="form-control">
+
+                                @foreach (patientModel temp in ViewBag.pacientes)
+                                {
+                                    <option asp-for="paciente" value="@temp.patient_id">@temp.patient_name  @temp.patient_lastname</option>
+                                }
+
+
+                            </select>
+                        </div>
+                        <div>
+                            <h7>Vacuna: </h7>
+
+                            <select name="vaccinescb1" id="vaccinescb1" class="form-control">
+                                @foreach (vaccineModel temp in ViewBag.vacunas)
+                                {
+                                    <option asp-for="vacuna" value="@temp.vaccine_id">@temp.vaccine_name</option>
+                                }
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <h7>Fecha Aplicacion: </h7>
+                            <input asp-for="aplicacion" type="date" class="form-control" id="appday" name="appday">
+                            <span asp-validation-for="aplicacion" class="text-danger"></span>
+
+                        </div>
+                        <div class="form-group">
+                            <h7>Proxima Aplicacion: </h7>
+                            <input asp-for="siguienteapp" type="date" class="form-control" id="nextapp" name="nextapp">
+                            <span asp-validation-for="siguienteapp" class="text-danger"></span>
+
+                        </div>
+                        <div class="form-group">
+
+                            <input type="text" class="form-control" id="description" name="description" placeholder="Descripcion">
+                        </div>
+
+                        <div>
+                            <input type="button" href="javascript:;" onclick="registrarpacienteVacuna($('#patientcb1').val(),$('#vaccinescb1').val(),$('#appday').val(),$('#nextapp').val(),$('#description').val()); return false;" id="registrar" name="registrar" value="Registrar" class="btn btn-primary" />
+
+                        </div>
+                        <div class="form-group">
+                        @*    <input type="submit" value="Registrar" class="btn btn-primary" />*@
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+</div>

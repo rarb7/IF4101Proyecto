@@ -1,0 +1,120 @@
+﻿@using Proyecto3_Medico.Models;
+
+
+<div id="appointment" class="container  ">
+
+    <div class="row justify-content-center align-items-center">
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <form>
+                        <h7>Buscar detalles de Vacunas</h7>
+                        <div>
+                            <h7>Paciente: </h7>
+                            <select name="paciente" id="paciente" class="form-control">
+                                @if (ViewBag.pacientes != null)
+                                {
+                                    @foreach (patientModel temp in ViewBag.pacientes)
+                                    {
+                                        <option asp-for="paciente" value="@temp.patient_id">@temp.patient_name  @temp.patient_lastname</option>
+                                    }
+                                }
+
+                            </select>
+
+                            <input type="button" href="javascript:;" onclick="buscarDetalleVacuna($('#paciente').val()); return false;" id="Buscar" name="Buscar" value="Buscar" class="btn btn-primary" />
+
+                        </div>
+
+
+                        <div class="table-responsive">
+                            <table class="table table-striped" id="detalle">
+                                <thead>
+                                    <tr>
+                                        <th>Vacuna</th>
+                                        <th>Fecha Aplicacion</th>
+                                        <th>Siguiente Aplicacion</th>
+                                        <th>Razon Aplicacion</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody">
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        @*ingresar vacuna*@
+
+        <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card h-100">
+                <div class="card-body h-100">
+                    <form>
+                        <h7>Editar detalle de la Vacuna del Paciente</h7>
+                        <div>
+
+                            <label>Paciente</label>
+                            <input type="text" class="form-control" id="paciente1" name="paciente1" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Vacuna Aplicada</label>
+                            <input type="text" class="form-control" id="vacuna" name="vacuna" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Fecha de la aplicacion</label>
+                            <input type="datetime" class="form-control" id="fecha" name="fecha" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Proxima fecha de aplicacion</label>
+                            <input type="datetime" class="form-control" id="fechasg" name="fechasg" disabled>
+                        </div>
+                        <div class="form-group">
+                            <label>Razones de la aplicacion</label>
+                            <input type="text" class="form-control" id="appDescription" name="appDescription" disabled>
+                        </div>
+                        
+                        <div>
+                            <input type="button" href="javascript:;" onclick="allowInputVaccine(); return false;" value="EDITAR" />
+                            <input type="button" href="javascript:;" onclick="updateVaccine($('#paciente1').val(),$('#vacuna').val(),$('#fecha').val(),$('#fechasg').val(),$('#appDescription').val()); return false;" value="INGRESAR" />
+                            <input type="button" href="javascript:;" onclick="DeleteVaccine($('#paciente1').val(),$('#vacuna').val()); return false;" value="ELIMINAR" />
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div><!--fin de la fila-->
+
+
+
+
+</div>
+<script type="text/javascript">
+
+
+
+    $(document).ready(function () {
+
+        $("#detalle tbody").on('click', 'tr', function () {
+            // get the current row
+            var currentRow = $(this).closest("tr");
+
+            var col1 = $(this).find("td:eq(0)").html();
+            var col2 = $(this).find("td:eq(1)").html();
+            var col3 = $(this).find("td:eq(2)").html();
+            var col4 = $(this).find("td:eq(3)").html();
+
+            document.getElementById("paciente1").value = $("#paciente").val();
+            document.getElementById("vacuna").value = col1;
+            document.getElementById("fecha").value = col2;
+            document.getElementById("fechasg").value = col3;
+            document.getElementById("appDescription").value = col4;
+
+        });
+
+    });
+</script>
