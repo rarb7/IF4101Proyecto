@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Expediente</string>
+    <string name="fecha">Fecha</string>
+    <string name="centro">Centro</string>
+    <string name="ID">Identificacion</string>
+    <string name="Pass">Contraseña</string>
+    <string name="nada">........</string>
+    <string name="listavacia">No hay registros para este usuario</string>
+</resources>

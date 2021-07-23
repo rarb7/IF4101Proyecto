@@ -13,6 +13,6 @@ namespace Expediente_API
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
         }
-        public DbSet<PatientVaccine> patientVaccine { get; set; }
+        public DbSet<Patient> Patient { get; set; }
     }
 }
