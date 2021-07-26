@@ -9,13 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.expediente.Models.PatientInformation;
 import com.example.expediente.Models.PatientSingleton;
-import com.example.expediente.servicesAPI.patienteService;
 
-import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -42,7 +36,7 @@ public class MenuPrincipal extends AppCompatActivity {
                 .baseUrl("https://webapiexpediente.azurewebsites.net/Api/Pacientes/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
-        obtainInfo(singleton.getId());
+        //obtainInfo(singleton.getId());
         vaccines = findViewById(R.id.btn_vacunas);
         salir = findViewById(R.id.btnSalir);
         allergies = findViewById(R.id.btnAllergy);
@@ -81,72 +75,63 @@ public class MenuPrincipal extends AppCompatActivity {
     private void openIntent() {
         Intent intent = new Intent(getApplicationContext(),UserInfo.class);
       //  System.out.println(information.getAddress().getDistrito());
-        intent.putExtra("userName",nombre);
-        intent.putExtra("LastName",lastname);
-        intent.putExtra("Age",edad);
-
-        intent.putExtra("BT",BT);
-        intent.putExtra("MS",MT);
-        intent.putExtra("Phone",Phone);
-
-        intent.putExtra("Province",province);
-        intent.putExtra("Canton",canton);
-        intent.putExtra("Distrito",distrito);
-        intent.putExtra("OS",otros);
+//        intent.putExtra("userName",nombre);
+//        intent.putExtra("LastName",lastname);
+//        intent.putExtra("Age",edad);
+//
+//        intent.putExtra("BT",BT);
+//        intent.putExtra("MS",MT);
+//        intent.putExtra("Phone",Phone);
+//
+//        intent.putExtra("Province",province);
+//        intent.putExtra("Canton",canton);
+//        intent.putExtra("Distrito",distrito);
+//        intent.putExtra("OS",otros);
 
         startActivity(intent);
     }
 
-    private void obtainInfo(int id){
-
-        patienteService service  = retrofit.create(patienteService.class);
-        Call<List<PatientInformation>> RequestCall = service.obtainInformacion(id);
-
-        RequestCall.enqueue(new Callback<List<PatientInformation>>() {
-
-
-
-            @Override
-            public void onResponse(Call<List<PatientInformation>> call, Response<List<PatientInformation>> response) {
-                if(response.isSuccessful()) {//si la respuesta es existosa
-                   List<PatientInformation> list = response.body();
-                    nombre = list.get(0).getPatient().getPatientName();
-
-                    lastname = list.get(0).getPatient().getPatientLastname();
-                    edad = String.valueOf(list.get(0).getPatient().getPatientAge());
-
-                     BT= list.get(0).getDetails().getBloodType();
-                    MT=list.get(0).getDetails().getMaritalStatus();
-                    Phone = list.get(0).getDetails().getPhone();
-
-                    province = list.get(0).getAddress().getProvincia();
-        canton = list.get(0).getAddress().getCanton();
-                    distrito = list.get(0).getAddress().getDistrito();
-        otros = list.get(0).getAddress().getOtrasSennas();
+//    private void obtainInfo(int id){
 //
-              //      information = list;
-//                    PatientInformation p = new PatientInformation();
-//                    p.setAddress(list.get(0).getAddress());
-//                    p.setDetails(list.get(0).getDetails());
-//                    p.setPatient(list.get(0).getPatient());
-                //   System.out.println(information.get(0).getAddress().getDistrito());
-//                    singleton.setInformation(p);
-//                    ListA.addAppointment(new ArrayList(list));
+//        patienteService service  = retrofit.create(patienteService.class);
+//        Call<List<PatientInformation>> RequestCall = service.obtainInformacion(id);
 //
-//                    ListA.notifyDataSetChanged();
-
-
-                }
-            }
-
-            @Override
-            public void onFailure(Call<List<PatientInformation>> call, Throwable t) {
-
-                System.out.println("OnFailure ---->"+t.getMessage());
-            }
-        });
-
-    }
+//        RequestCall.enqueue(new Callback<List<PatientInformation>>() {
+//
+//
+//
+//            @Override
+//            public void onResponse(Call<List<PatientInformation>> call, Response<List<PatientInformation>> response) {
+//                if(response.isSuccessful()) {//si la respuesta es existosa
+//                   List<PatientInformation> list = response.body();
+//
+//                    nombre = list.get(0).getPatient().getPatientName();
+//                    lastname = list.get(0).getPatient().getPatientLastname();
+//                    edad = String.valueOf(list.get(0).getPatient().getPatientAge());
+//                    if(list.get(0).getDetails() != null){
+//                        BT= list.get(0).getDetails().getBloodType();
+//                        MT=list.get(0).getDetails().getMaritalStatus();
+//                        Phone = list.get(0).getDetails().getPhone();
+//                    }
+//
+//                    if(list.get(0).getAddress() != null){
+//                         province = list.get(0).getAddress().getProvincia();
+//                         canton = list.get(0).getAddress().getCanton();
+//                         distrito = list.get(0).getAddress().getDistrito();
+//                         otros = list.get(0).getAddress().getOtrasSennas();
+//                     }
+//
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<List<PatientInformation>> call, Throwable t) {
+//
+//                System.out.println("OnFailure ---->"+t.getMessage());
+//            }
+//        });
+//
+//    }
 
     private void onClick(View v) {
         //onDestroy();

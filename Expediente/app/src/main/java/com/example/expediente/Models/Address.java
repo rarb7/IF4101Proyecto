@@ -1,95 +1,89 @@
 package com.example.expediente.Models;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
-import java.util.HashMap;
-import java.util.Map;
 public class Address {
-    @JsonProperty("patientId")
+    @JsonProperty("PatientId")
     private Integer patientId;
-    @JsonProperty("provincia")
+    @JsonProperty("Provincia")
     private String provincia;
-    @JsonProperty("canton")
+    @JsonProperty("Canton")
     private String canton;
-    @JsonProperty("distrito")
+    @JsonProperty("Distrito")
     private String distrito;
-    @JsonProperty("otrasSennas")
+    @JsonProperty("OtrasSennas")
     private String otrasSennas;
-    @JsonProperty("patient")
-    private Patient patient;
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    //@JsonProperty("patient")
+   // private Patient patient;
+//    @JsonIgnore
+//    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    @JsonProperty("patientId")
+    @JsonProperty("PatientId")
     public Integer getPatientId() {
         return patientId;
     }
 
-    @JsonProperty("patientId")
+    @JsonProperty("PatientId")
     public void setPatientId(Integer patientId) {
         this.patientId = patientId;
     }
 
-    @JsonProperty("provincia")
+    @JsonProperty("Provincia")
     public String getProvincia() {
         return provincia;
     }
 
-    @JsonProperty("provincia")
+    @JsonProperty("Provincia")
     public void setProvincia(String provincia) {
         this.provincia = provincia;
     }
 
-    @JsonProperty("canton")
+    @JsonProperty("Canton")
     public String getCanton() {
         return canton;
     }
 
-    @JsonProperty("canton")
+    @JsonProperty("Canton")
     public void setCanton(String canton) {
         this.canton = canton;
     }
 
-    @JsonProperty("distrito")
+    @JsonProperty("Distrito")
     public String getDistrito() {
         return distrito;
     }
 
-    @JsonProperty("distrito")
+    @JsonProperty("Distrito")
     public void setDistrito(String distrito) {
         this.distrito = distrito;
     }
 
-    @JsonProperty("otrasSennas")
+    @JsonProperty("OtrasSennas")
     public String getOtrasSennas() {
         return otrasSennas;
     }
 
-    @JsonProperty("otrasSennas")
+    @JsonProperty("OtrasSennas")
     public void setOtrasSennas(String otrasSennas) {
         this.otrasSennas = otrasSennas;
     }
 
-    @JsonProperty("patient")
-    public Patient getPatient() {
-        return patient;
-    }
+//    @JsonProperty("patient")
+//    public Patient getPatient() {
+//        return patient;
+//    }
+//
+//    @JsonProperty("patient")
+//    public void setPatient(Patient patient) {
+//        this.patient = patient;
+//    }
 
-    @JsonProperty("patient")
-    public void setPatient(Patient patient) {
-        this.patient = patient;
-    }
-
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
+//    @JsonAnyGetter
+//    public Map<String, Object> getAdditionalProperties() {
+//        return this.additionalProperties;
+//    }
+//
+//    @JsonAnySetter
+//    public void setAdditionalProperty(String name, Object value) {
+//        this.additionalProperties.put(name, value);
+//    }
 
 }

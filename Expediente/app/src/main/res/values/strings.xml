@@ -6,4 +6,24 @@
     <string name="Pass">Contraseña</string>
     <string name="nada">........</string>
     <string name="listavacia">No hay registros para este usuario</string>
+    <string name="estado_civil">Estado Civil</string>
+    <string name="tipo_sangre">Tipo Sangre</string>
+    <string name="Telefono">Telefono</string>
+    <string name="Provincia">Provincia</string>
+    <string name="Canton">Canton</string>
+    <string name="Distrito">Distrito</string>
+    <string name="Otros">Otras señas</string>
+    <string name="Nombre">Nombre</string>
+    <string name="Apellido">Apellido</string>
+    <string name="password">Contraseña</string>
+    <string name="Edad">Edad</string>
+    <string name="info">Registrar Datos Personales</string>
+    <string name="add">Registrar Direccion </string>
+    <string name="einfo">Editar Datos Personales</string>
+    <string name="eadd">Editar Direccion </string>
+    <string name="safe">Guardar</string>
+    <string name="welcome">Bienvenido</string>
+    <string name="Vacunas">Vacunas</string>
+    <string name="Alergias">Alergias</string>
+    <string name="Citas">Citas Medicas</string>
 </resources>

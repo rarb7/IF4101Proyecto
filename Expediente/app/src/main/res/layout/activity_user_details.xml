@@ -7,144 +7,108 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout3"
-        android:layout_width="333dp"
-        android:layout_height="174dp"
+        android:layout_width="378dp"
+        android:layout_height="676dp"
         android:background="@drawable/layout_corner_lists"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.028">
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nombre"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/k"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.097"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintVertical_bias="0.473">
 
         <TextView
             android:id="@+id/userName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text="@string/Nombre"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.284"
-            app:layout_constraintStart_toEndOf="@+id/textView"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.127" />
-
-        <TextView
-            android:id="@+id/k"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Apellido"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/textView15"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.095"
+            app:layout_constraintHorizontal_bias="0.126"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.695" />
+            app:layout_constraintVertical_bias="0.148" />
 
         <TextView
             android:id="@+id/apellido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:enabled="true"
-            android:text="TextView"
+            android:text="@string/Apellido"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.281"
-            app:layout_constraintStart_toEndOf="@+id/k"
-            app:layout_constraintTop_toBottomOf="@+id/userName"
-            app:layout_constraintVertical_bias="0.161" />
-
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Edad"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.089"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.299"
+            app:layout_constraintStart_toEndOf="@+id/userName"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.656" />
+            app:layout_constraintVertical_bias="0.148" />
 
         <TextView
             android:id="@+id/userAge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="48dp"
             android:enabled="true"
-            android:text="TextView"
+            android:text="@string/Edad"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.334"
-            app:layout_constraintStart_toEndOf="@+id/textView15"
-            app:layout_constraintTop_toBottomOf="@+id/apellido"
-            app:layout_constraintVertical_bias="0.316" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="350dp"
-        android:layout_height="206dp"
-        android:background="@drawable/layout_corner_lists"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.528"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
-        app:layout_constraintVertical_bias="0.593">
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/apellido"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.148" />
 
         <TextView
-            android:id="@+id/blood"
-            android:layout_width="222dp"
-            android:layout_height="24dp"
-            android:enabled="false"
-            android:text="TextView"
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/einfo"
+            android:textColor="@color/azul"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/phone"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.156"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.885" />
+            app:layout_constraintVertical_bias="0.226" />
 
         <EditText
             android:id="@+id/maritalStatus"
             android:layout_width="203dp"
             android:layout_height="37dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="192dp"
             android:editable="false"
             android:ems="10"
             android:enabled="false"
             android:inputType="textPersonName"
-            android:text="ec"
+            android:text="@string/estado_civil"
             android:textSize="14sp"
             app:layout_constraintBottom_toTopOf="@+id/blood"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.136"
+            app:layout_constraintHorizontal_bias="0.106"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.571" />
+
+        <TextView
+            android:id="@+id/blood"
+            android:layout_width="202dp"
+            android:layout_height="30dp"
+            android:enabled="false"
+            android:text="@string/tipo_sangre"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/maritalStatus"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/maritalStatus"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.387" />
 
         <EditText
             android:id="@+id/phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:editable="false"
             android:ems="10"
             android:enabled="false"
@@ -152,25 +116,25 @@
             android:text="8888888"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.107"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.674" />
+            app:layout_constraintEnd_toEndOf="@+id/blood"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/blood"
+            app:layout_constraintTop_toBottomOf="@+id/blood"
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/btnInfoedit"
-            android:layout_width="99dp"
-            android:layout_height="46dp"
+            android:layout_width="102dp"
+            android:layout_height="41dp"
             android:text="Editar"
             android:textSize="12sp"
             app:backgroundTint="@color/azul"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.924"
+            app:layout_constraintHorizontal_bias="0.258"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.743" />
+            app:layout_constraintVertical_bias="0.555" />
 
         <Button
             android:id="@+id/btnupdateInfo"
@@ -181,57 +145,26 @@
             app:backgroundTint="@color/azul"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.935"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.307"
+            app:layout_constraintStart_toEndOf="@+id/btnInfoedit"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout2"
-        android:layout_width="338dp"
-        android:layout_height="239dp"
-        android:layout_marginTop="192dp"
-        android:background="@drawable/layout_corner_lists"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3"
-        app:layout_constraintVertical_bias="0.398">
+            app:layout_constraintVertical_bias="0.555" />
 
         <EditText
             android:id="@+id/province"
-            android:layout_width="205dp"
-            android:layout_height="38dp"
+            android:layout_width="158dp"
+            android:layout_height="41dp"
             android:ems="10"
             android:enabled="false"
             android:inputType="textPersonName"
-            android:text="...."
+            android:text="@string/Provincia"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintHorizontal_bias="0.085"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.009" />
-
-        <EditText
-            android:id="@+id/canton"
-            android:layout_width="177dp"
-            android:layout_height="38dp"
-            android:layout_marginTop="8dp"
-            android:ems="10"
-            android:enabled="false"
-            android:inputType="textPersonName"
-            android:text="..."
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/distrito"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.416"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/province"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.782" />
 
         <EditText
             android:id="@+id/distrito"
@@ -240,14 +173,31 @@
             android:ems="10"
             android:enabled="false"
             android:inputType="textPersonName"
-            android:text="...."
+            android:text="@string/Distrito"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.385"
+            app:layout_constraintHorizontal_bias="0.087"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/province"
+            app:layout_constraintVertical_bias="0.226" />
+
+        <EditText
+            android:id="@+id/canton"
+            android:layout_width="177dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="12dp"
+            android:ems="10"
+            android:enabled="false"
+            android:inputType="textPersonName"
+            android:text="@string/Canton"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/province"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.472" />
+            app:layout_constraintVertical_bias="0.778" />
 
         <EditText
             android:id="@+id/idsennas"
@@ -256,39 +206,54 @@
             android:ems="10"
             android:enabled="false"
             android:inputType="textPersonName"
-            android:text="...."
+            android:text="@string/Otros"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.385"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.673" />
+            app:layout_constraintHorizontal_bias="0.264"
+            app:layout_constraintStart_toEndOf="@+id/distrito"
+            app:layout_constraintTop_toBottomOf="@+id/canton"
+            app:layout_constraintVertical_bias="0.254" />
 
         <Button
             android:id="@+id/editarAddress"
-            android:layout_width="92dp"
-            android:layout_height="40dp"
+            android:layout_width="102dp"
+            android:layout_height="41dp"
             android:text="Editar"
             app:backgroundTint="@color/azul"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btnUpdateAddress"
-            app:layout_constraintHorizontal_bias="0.32"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.29"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.97" />
+            app:layout_constraintTop_toBottomOf="@+id/distrito"
+            app:layout_constraintVertical_bias="0.609" />
 
         <Button
             android:id="@+id/btnUpdateAddress"
-            android:layout_width="110dp"
-            android:layout_height="39dp"
+            android:layout_width="120dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="12dp"
             android:text="Guardar"
             app:backgroundTint="@color/azul"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.86"
+            app:layout_constraintHorizontal_bias="0.13"
+            app:layout_constraintStart_toEndOf="@+id/editarAddress"
+            app:layout_constraintTop_toBottomOf="@+id/idsennas"
+            app:layout_constraintVertical_bias="0.609" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eadd"
+            android:textColor="@color/azul"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.97" />
+            app:layout_constraintVertical_bias="0.666" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
