@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +25,7 @@ public class InicioSesion extends AppCompatActivity {
     Button Registro;
     TextView id;
     EditText password;
+    ImageView icono;
     PatientSingleton singleton = PatientSingleton.getInstance();
     private Retrofit retrofit;
     @Override
@@ -33,6 +35,8 @@ public class InicioSesion extends AppCompatActivity {
 
         Entrar = findViewById(R.id.btnEntrar);
         Registro = findViewById(R.id.registro);
+        icono = findViewById(R.id.icono_ex);
+
 
         id = findViewById(R.id.txt_id);
         password = findViewById(R.id.id_pss);

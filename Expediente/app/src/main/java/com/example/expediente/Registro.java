@@ -1,6 +1,7 @@
 package com.example.expediente;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -73,6 +74,7 @@ public class Registro extends AppCompatActivity {
         GuardarPaciente.setOnClickListener(v->{
 
             guardarPaciente();
+
         });
 
 
@@ -80,7 +82,7 @@ public class Registro extends AppCompatActivity {
 
     private void guardarPaciente() {
 
-         patient = new Patient();
+        patient = new Patient();
         patient.setPatientId(Integer.parseInt(id.getText().toString()));
         patient.setPatientName(nombre.getText().toString());
         patient.setPatientPassword(password.getText().toString());
@@ -97,9 +99,9 @@ public class Registro extends AppCompatActivity {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
 
-
+                System.out.println(response.code() );
                 if(response.code() == 200){
-                        System.out.println("registrado");
+                   //     System.out.println("registrado");
                 }else{
 
 
@@ -115,24 +117,27 @@ public class Registro extends AppCompatActivity {
     }
 
     private void guardarInfo() {
-        Details patient = new Details();
-        patient.setPatientId(Integer.parseInt(id.getText().toString()));
-        patient.setMaritalStatus(estadoCivil.getText().toString());
-        patient.setPhone(telefono.getText().toString());
-        patient.setBloodType(tipoSangre.getText().toString());
+        Details details = new Details();
+        details.setPatientId(Integer.parseInt(id.getText().toString()));
+        details.setMaritalStatus(estadoCivil.getText().toString());
+        details.setPhone(telefono.getText().toString());
+        details.setBloodType(tipoSangre.getText().toString());
+         Patient patient2 = new Patient();
+        patient2.setPatientId(Integer.parseInt(id.getText().toString()));
+//        details.setPatient(patient2);
 
 
         System.out.println("estoy en registrar");
 
         patienteService service  = retrofit.create(patienteService.class);
         System.out.println("despues del service");
-        Call<Void> RequestCall = service.guardarInformacion(patient);
+        Call<Void> RequestCall = service.guardarInformacion(details);
         System.out.println("despues del call");
         RequestCall.enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
 
-
+                Log.e("API",response.message());
                 if(response.code() == 200){
                     System.out.println("registrado");
                 }else{
@@ -151,28 +156,28 @@ public class Registro extends AppCompatActivity {
 
     private void guardarDireccion() {
 
-        Address patient = new Address();
-        patient.setPatientId(Integer.parseInt(id.getText().toString()));
-        patient.setProvincia(nombre.getText().toString());
-        patient.setCanton(canton.getText().toString());
-        patient.setDistrito(distrito.getText().toString());
-        patient.setOtrasSennas(otros.getText().toString());
-
+        Address add = new Address();
+        add.setPatientId(Integer.parseInt(id.getText().toString()));
+        add.setProvincia(provincia.getText().toString());
+        add.setCanton(canton.getText().toString());
+        add.setDistrito(distrito.getText().toString());
+        add.setOtrasSennas(otros.getText().toString());
+       // patient.setPatient(this.patient);
 
         System.out.println("estoy en registrar");
 
         patienteService service  = retrofit.create(patienteService.class);
         System.out.println("despues del service");
-        Call<Void> RequestCall = service.guardarDireccion(patient);
+        Call<Void> RequestCall = service.guardarDireccion(add);
         System.out.println("despues del call");
         RequestCall.enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
-
+                Log.e("API",response.message());
                 System.out.println(response.code());
-//                if(response.code() == 200){
-//                    System.out.println("registrado");
-//                }else{
+                if(response.code() == 200){
+                    System.out.println("registrado");
+                }
 //
 //
 //                }

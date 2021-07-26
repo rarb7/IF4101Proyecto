@@ -25,27 +25,29 @@ public interface patienteService {
     @GET("Informacion/{id}")
     Call<List<PatientInformation>> obtainInformacion(@Path("id") int id);
 
-    //actualizar la informacion del paciente
-    @PUT("Detalles/Editar/Informacion/{status}/{phone}/{id}")
+    //---------- EDICION DE INFORMACION PERSONAL---------------------
 
-    //@Headers({"Content-Type: application/json;charset=UTF-8"})
-    Call<Void> editarInformacion( @Path("status")String status ,@Path("phone") String telefono ,@Path("id") int id);
+    //actualizar la informacion del paciente
+    @PUT("Detalles/Editar/Informacion/{id}")
+    @Headers({ "Content-Type: application/json"})
+    Call<Void> editarInformacion(@Path("id") int id, @Body Details details);
 
     @PUT("Detalles/Editar/Direccion/{id}")
-   // @Headers({ "Content-Type: application/json"})
-   @Headers({"Content-Type: application/json;charset=UTF-8"})
-    Call<Void> editarDireccion(@Body Address direccion , @Path("id") int id);
+    @Headers({ "Content-Type: application/json"})
+   //@Headers({"Content-Type: application/json;charset=UTF-8"})
+    Call<Void> editarDireccion(@Path("id") int id,@Body Address direccion);
 
-    //para guardar
+    //para guardar ------------ YA SIRVEN UWU -------------------------
     @POST("Registrar/")
     @Headers({"Content-Type: application/json;charset=UTF-8"})
     Call<Void> guardarPaciente(@Body Patient patient);
 
     @POST("Direccion/")
-    @Headers({"Content-Type: application/json;charset=UTF-8"})
+    //@Headers({"Content-Type: application/json;charset=UTF-8"})
+    @Headers({ "Content-Type: application/json"})
     Call<Void> guardarDireccion(@Body Address patient);
 
-    @POST("Detalles/Registrar/Informacion/")
+    @POST("Registrar/Informacion/")
     @Headers({"Content-Type: application/json;charset=UTF-8"})
     Call<Void> guardarInformacion(@Body Details patient);
 

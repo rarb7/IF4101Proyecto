@@ -304,7 +304,7 @@ namespace Expediente_API.Models
                    .IsUnicode(false)
                    .HasColumnName("CANTON");
 
-                entity.Property(e => e.Provincia)
+                entity.Property(e => e.Distrito)
                    .HasMaxLength(32)
                    .IsUnicode(false)
                    .HasColumnName("DISTRITO");
@@ -318,10 +318,10 @@ namespace Expediente_API.Models
                 //    .HasForeignKey(d => d.AddressId)
                 //    .HasConstraintName("FK_P_ADDRESS_ID");
 
-                entity.HasOne(d => d.Patient)
-                    .WithMany()
-                    .HasForeignKey(d => d.PatientId)
-                    .HasConstraintName("FK_P_PATIENT_ID");
+                //entity.HasOne(d => d.Patient)
+                //    .WithMany()
+                //    .HasForeignKey(d => d.PatientId)
+                //    .HasConstraintName("FK_P_PATIENT_ID");
             });
 
             modelBuilder.Entity<TbPatientAllergy>(entity =>
@@ -383,10 +383,10 @@ namespace Expediente_API.Models
 
                 entity.Property(e => e.PatientId).HasColumnName("PATIENT_ID");
 
-                entity.HasOne(d => d.Patient)
-                    .WithMany()
-                    .HasForeignKey(d => d.PatientId)
-                    .HasConstraintName("FK_PD_PATIENT_ID");
+                //entity.HasOne(d => d.Patient)
+                //    .WithMany()
+                //    .HasForeignKey(d => d.PatientId)
+                //    .HasConstraintName("FK_PD_PATIENT_ID");
             });
 
             modelBuilder.Entity<TbPatientPhone>(entity =>

@@ -1,84 +1,78 @@
 package com.example.expediente.Models;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-
-import java.util.HashMap;
-import java.util.Map;
 public class Details {
 
-    @JsonProperty("patientId")
+    @JsonProperty("PatientId")
     private Integer patientId;
-    @JsonProperty("bloodType")
+    @JsonProperty("BloodType")
     private String bloodType;
-    @JsonProperty("maritalStatus")
+    @JsonProperty("MaritalStatus")
     private String maritalStatus;
-    @JsonProperty("phone")
+    @JsonProperty("Phone")
     private String phone;
-    @JsonProperty("patient")
-    private Patient patient;
-    @JsonIgnore
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+//    @JsonProperty("patient")
+//    private Patient patient;
+//    @JsonIgnore
+//    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    @JsonProperty("patientId")
+    @JsonProperty("PatientId")
     public Integer getPatientId() {
         return patientId;
     }
 
-    @JsonProperty("patientId")
+    @JsonProperty("PatientId")
     public void setPatientId(Integer patientId) {
         this.patientId = patientId;
     }
 
-    @JsonProperty("bloodType")
+    @JsonProperty("BloodType")
     public String getBloodType() {
         return bloodType;
     }
 
-    @JsonProperty("bloodType")
+    @JsonProperty("BloodType")
     public void setBloodType(String bloodType) {
         this.bloodType = bloodType;
     }
 
-    @JsonProperty("maritalStatus")
+    @JsonProperty("MaritalStatus")
     public String getMaritalStatus() {
         return maritalStatus;
     }
 
-    @JsonProperty("maritalStatus")
+    @JsonProperty("MaritalStatus")
     public void setMaritalStatus(String maritalStatus) {
         this.maritalStatus = maritalStatus;
     }
 
-    @JsonProperty("phone")
+    @JsonProperty("Phone")
     public String getPhone() {
         return phone;
     }
 
-    @JsonProperty("phone")
+    @JsonProperty("Phone")
     public void setPhone(String phone) {
         this.phone = phone;
     }
 
-    @JsonProperty("patient")
-    public Patient getPatient() {
-        return patient;
-    }
+//    @JsonProperty("patient")
+//    public Patient getPatient() {
+//        return patient;
+//    }
+//
+//    @JsonProperty("patient")
+//    public void setPatient(Patient patient) {
+//        this.patient = patient;
+//    }
 
-    @JsonProperty("patient")
-    public void setPatient(Patient patient) {
-        this.patient = patient;
-    }
-
-    @JsonAnyGetter
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    @JsonAnySetter
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
+//    @JsonAnyGetter
+//    public Map<String, Object> getAdditionalProperties() {
+//        return this.additionalProperties;
+//    }
+//
+//    @JsonAnySetter
+//    public void setAdditionalProperty(String name, Object value) {
+//        this.additionalProperties.put(name, value);
+//    }
 
 }

@@ -6,8 +6,9 @@
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="326dp"
-        android:layout_height="320dp"
+        android:id="@+id/constraintLayout7"
+        android:layout_width="392dp"
+        android:layout_height="346dp"
         android:background="@drawable/layout_corner"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,10 +25,10 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/id_pss"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.536"
+            app:layout_constraintHorizontal_bias="0.474"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.885" />
+            app:layout_constraintVertical_bias="0.881" />
 
         <TextView
             android:id="@+id/lbl_id"
@@ -37,10 +38,9 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/txt_id"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.545"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.648" />
+            app:layout_constraintVertical_bias="0.675" />
 
         <EditText
             android:id="@+id/id_pss"
@@ -51,9 +51,10 @@
             android:inputType="textPassword"
             app:layout_constraintBottom_toTopOf="@+id/btnEntrar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.583"
+            app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.491" />
 
         <EditText
             android:id="@+id/txt_id"
@@ -63,10 +64,9 @@
             android:inputType="textPersonName"
             app:layout_constraintBottom_toTopOf="@+id/lbl_contrasenna"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.577"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.776" />
+            app:layout_constraintVertical_bias="0.733" />
 
         <Button
             android:id="@+id/btnEntrar"
@@ -84,10 +84,10 @@
 
         <Button
             android:id="@+id/registro"
-            android:layout_width="105dp"
-            android:layout_height="47dp"
+            android:layout_width="145dp"
+            android:layout_height="38dp"
             android:text="Registrarse"
-            android:textSize="8sp"
+            android:textSize="14sp"
             app:backgroundTint="@color/azul"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -96,4 +96,16 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.941" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/icono_ex"
+        android:layout_width="91dp"
+        android:layout_height="81dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.846"
+        tools:srcCompat="@drawable/ic_informe_medico" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

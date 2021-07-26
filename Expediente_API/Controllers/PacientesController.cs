@@ -134,9 +134,9 @@ namespace Expediente_API.Controllers
             using (var db = new Models.proyecto3_lenguajesContext())
             {
 
-                Models.TbPatientDetail  detail   =   db.TbPatientDetails.First(x => x.PatientId == id);
-                Models.TbPatientAddress address  =   db.TbPatientAddresses.First(x => x.PatientId == id);
-                Models.TbPatient        temp     =   db.TbPatients.First(x => x.PatientId == id);
+                Models.TbPatientDetail  detail   =   db.TbPatientDetails.FirstOrDefault(x => x.PatientId == id);
+                Models.TbPatientAddress address  =   db.TbPatientAddresses.FirstOrDefault(x => x.PatientId == id);
+                Models.TbPatient        temp     =   db.TbPatients.FirstOrDefault(x => x.PatientId == id);
 
                 Models.informacion info = new Models.informacion();
                 info.Patient = temp;
@@ -150,7 +150,29 @@ namespace Expediente_API.Controllers
 
         }
 
+        [HttpPost("Direccion")]
 
+        public async Task<ActionResult> registrarDireccion(Models.TbPatientAddress temp)//asincrono, no se sabe cuando va a durar 
+        {
+            using (var db = new Models.proyecto3_lenguajesContext())
+            {
+                db.TbPatientAddresses.Add(temp);
+                await db.SaveChangesAsync();
+            }
+            return Ok();
+        }//task
+
+        [HttpPost("Registrar/Informacion")]
+
+        public async Task<ActionResult> registrarInformacion(Models.TbPatientDetail usuario)//asincrono, no se sabe cuando va a durar 
+        {
+            using (var db = new Models.proyecto3_lenguajesContext())
+            {
+                db.TbPatientDetails.Add(usuario);
+                await db.SaveChangesAsync();
+            }
+            return Ok();
+        }//task
 
     }//fin clase de Pacientes
 }
